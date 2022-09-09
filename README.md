@@ -1,8 +1,8 @@
-# Algoritmo Genetico para solução de Employee Timetabling Problem
+# Algoritmo Genético para solução de Employee Timetabling Problem (ETP)
 
-Aplicação de um algoritmo aproximado para produção de artigo parte da avaliação da disciplina Algoritmos e Estruturas de Dados.
+Aplicação de um algoritmo aproximado para produção de artigo como parte da avaliação da disciplina Algoritmos e Estruturas de Dados - PPCA/UnB.
 
-Resolver o problema de escala de trabalho dos Agentes Socioeducativos de uma Unidade de Internação de modo a adequar e otimizar a carga horária semanal de 40 horas, com menor custo e necessidade de ajustes.
+Resolver o problema de escala de trabalho dos Agentes Socioeducativos de uma Unidade de Internação no DF, de modo a adequar e otimizar a carga horária semanal de 40 horas, com menor custo e necessidade de ajustes.
 
 
 ### Requisitos
