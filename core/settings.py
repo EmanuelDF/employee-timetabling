@@ -1,7 +1,7 @@
 from ruamel.yaml import YAML
 
 MAX_GENERATION_NUMBER       = 20
-POPULATION_SIZE             = 80
+POPULATION_SIZE             = 300
 TOURNAMENT_SELECTION_SIZE   = 3
 CROSSING_RATE               = 0.8
 MUTATION_RATE               = 0.2
