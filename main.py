@@ -17,8 +17,8 @@ if __name__ == "__main__":
     print(population[0].genes)
 
     print("\n---------- all timetables ------------")
-    for c in settings.RAW_DATA["classes"]:
-        print("class : {}".format(c))
+    for c in settings.RAW_DATA["modules"]:
+        print("module : {}".format(c))
         print(population[0].get_time_table(c))
 
         print("---------------------------------------------------\n")
