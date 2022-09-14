@@ -49,7 +49,7 @@ hours:
   - h6
 
 # <course, room_type, lecturer, units>
-course_mapping: 
+scale_mapping: 
   - ["cloud",  "A", "l5", 2]
   - ["sta",    "TP","l5", 2]
   - ["soa",    "TP","l5", 1]

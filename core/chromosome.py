@@ -14,7 +14,7 @@ class Chromosome():
         self.modules = data["modules"]
         self.days = data["days"]
         self.hours = data["hours"]
-        self.cols = data["course_mapping"]
+        self.cols = data["scale_mapping"]
         self.rooms = data["rooms"]
 
         # -- constants to reduce len() times --
