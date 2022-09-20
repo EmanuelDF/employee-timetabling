@@ -1,30 +1,24 @@
-# Algoritmo Genético para solução de Employee Timetabling Problem (ETP)
+# Genetic Algorithm for Employee Timetabling Problem (ETP) solution
 
-Aplicação de um algoritmo aproximado do tipo genético (GA) desenvolvido durante a produção de um artigo como parte da avaliação da disciplina Algoritmos e Estruturas de Dados - PPCA/UnB.
+Application of an approximate genetic type algorithm (GA) developed during the production of an article as part of the evaluation of the discipline Algorithms and Data Structures - PPCA/UnB.
 
-Resolver o problema de escala de trabalho dos Agentes Socioeducativos de uma Unidade de Internação no DF, de modo a adequar e otimizar a carga horária semanal de 40 horas, com menor custo e necessidade de ajustes.
+Solve the problem of the work schedule of the Socio-Educational Agents of an Inpatient Unit in the DF, in order to adapt and optimize the weekly workload of 40 hours, with lower cost and the need for adjustments.
 
+### Requirements
 
-### Requisitos
+The ideal number of Socio-Educational Agents per shift is 31 (thirty-one), whose current distribution is 28 servers in the modules;
 
-O quantitativo ideal de Agentes Socioeducativos por plantão é 31 (trinta e um), cuja distribuição atual é de 28 servidores nos módulos;
+Socio-educational agents work on a 24h x 72h scale (24 hours of work x 72 hours of rest);
 
-Os agentes socioeducativos atuam em uma escala 24h x 72h (24 horas de trabalho x 72 horas de descanso);
+At the end of the monthly cycle, the socio-educator must have completed and equivalent to 40 hours per week;
 
-Ao final do ciclo mensal, o sócio-educador deverá ter cumprido e equivalente a 40 horas semanais;
+Each module must have at least 2 agents per shift;
 
-Cada módulo deve ter no mínimo 2 agentes por plantão;
+At the end of the monthly cycle, the socio-educator must have completed and equivalent to 40 hours per week. Excessive or missing hours are controlled through workload adjustments in the following month;
 
-Ao final do ciclo mensal, o sócio-educador deverá ter cumprido e equivalente a 40 horas semanais. Os casos de horas excedentes ou faltantes são controladas por meio de ajustes de carga horária no mês subsequente;
+Legal leave of absence of civil servants should be considered, examples: vacations, allowances, medical certificates, etc. Absences are of the type: working hours adjustment (ACH), allowance (AB) and Vacation.
 
-Devem ser considerados os afastamentos legais dos servidores, exemplos: férias, abonos, atestados médicos, etc. As ausências são do tipo: ajuste de carga horária (ACH), abono (AB) e Férias.
+## References
 
-### Execução
-
-...
-
-## Referências
-
-* Samuel Lukas, Arnold Aribowo and Milyandreana Muchri (2012). Solving Timetable Problem by GeneticAlgorithm and Heuristic Search Case Study: Universitas Pelita Harapan Timetable, Real-World Applications ofGenetic Algorithms, Dr. Olympia Roeva (Ed.), ISBN: 978-953-51-0146-8, InTech, Available from: [this link](http://www.intechopen.com/books/real-world-applications-of-genetic-algorithms/solving-timetable-problem-by-genetic-algorithm-and-heuristic-search-case-study-universitas-pelita-ha)
+* Samuel Lukas, Arnold Aribowo and Milyandreana Muchri (2012). Solving Timetable Problem by GeneticAlgorithm and Heuristic Search Case Study: Universitas Pelita Harapan Timetable, Real-World Applications ofGenetic Algorithms, Dr. Olympia Roeva (Ed.), ISBN: 978-953-51-0146-8, InTech, Available from: [this link](http://www.intechopen.com/books/real-world-applications-of-genetic -algorithms/solving-timetable-problem-by-genetic-algorithm-and-heuristic-search-case-study-universitas-pelita-ha)
 * [Genetic Algorithms explaination by Rayen MHAMDI](https://rayenmhamdi.github.io/ai/ga/)
-# aed-timetable
