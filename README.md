@@ -2,7 +2,7 @@
 
 Application of an approximate genetic type algorithm (GA) developed during the production of an article as part of the evaluation of the discipline Algorithms and Data Structures - PPCA/UnB.
 
-Solve the problem of the work schedule of the Socio-Educational Agents of an Inpatient Unit in the DF, in order to adapt and optimize the weekly workload of 40 hours, with lower cost and the need for adjustments.
+Solve the problem of the work schedule of the Socio-Educational Agents of an Inpatient Unit in Brazil, in order to adapt and optimize the weekly workload of 40 hours, with lower cost and the need for adjustments.
 
 ### Requirements
 
