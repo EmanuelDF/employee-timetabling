@@ -4,19 +4,13 @@ Application of an approximate genetic type algorithm (GA) developed during the p
 
 Solve the problem of the work schedule of the Socio-Educational Agents of an Inpatient Unit in Brazil, in order to adapt and optimize the weekly workload of 40 hours, with lower cost and the need for adjustments.
 
-### Requirements
-
-The ideal number of Socio-Educational Agents per shift is 31 (thirty-one), whose current distribution is 28 servers in the modules;
-
-Socio-educational agents work on a 24h x 72h scale (24 hours of work x 72 hours of rest);
-
-At the end of the monthly cycle, the socio-educator must have completed and equivalent to 40 hours per week;
-
-Each module must have at least 2 agents per shift;
-
-At the end of the monthly cycle, the socio-educator must have completed and equivalent to 40 hours per week. Excessive or missing hours are controlled through workload adjustments in the following month;
-
-Legal leave of absence of civil servants should be considered, examples: vacations, allowances, medical certificates, etc. Absences are of the type: working hours adjustment (ACH), allowance (AB) and Vacation.
+### Rules
+- The ideal number of Socio-Educational Agents per shift is 31 (thirty-one), whose current distribution is 28 servers in the modules;
+- Socio-educational agents work on a 24h x 72h scale (24 hours of work x 72 hours of rest);
+- At the end of the monthly cycle, the socio-educator must have completed and equivalent to 40 hours per week;
+- Each module must have at least 2 agents per shift;
+- At the end of the monthly cycle, the socio-educator must have completed and equivalent to 40 hours per week. Excessive or missing hours are controlled through workload adjustments in the following month;
+- Legal leave of absence of civil servants should be considered, examples: vacations, allowances, medical certificates, etc. Absences are of the type: working hours adjustment (ACH), allowance (AB) and Vacation.
 
 ## References
 
