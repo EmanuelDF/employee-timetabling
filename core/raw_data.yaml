@@ -4,9 +4,6 @@ modules:
   - c2
   - c3
   - c4
-  - c5
-  - c6
-  - c7
 
 days:
   - d1
@@ -39,14 +36,25 @@ days:
   - d28
   - d29
   - d30
+  - d31
 
-hours:
-  - h1
-  - h2
-  - h3
-  - h4
-  - h5
-  - h6
+employee:
+  - e1
+  - e2
+  - e3
+  - e4
+  - e5
+  - e6
+  - e7
+  - e8
+  - e9
+  - e10
+  - e11
+  - e12
+  - e13
+  - e14
+  - e15
+  - e16
 
 # <course, room_type, lecturer, units>
 scale_mapping: 
