@@ -13,7 +13,7 @@ class Chromosome():
 
         self.modules = data["modules"]
         self.days = data["days"]
-        self.hours = data["hours"]
+        self.employee = data["employee"]
         self.cols = data["scale_mapping"]
         self.rooms = data["rooms"]
 
@@ -21,9 +21,9 @@ class Chromosome():
         self.LEN_ROOMS = sum(self.rooms["number"])
         self.LEN_MODULES = len(self.modules)
         self.LEN_DAYS = len(self.days)
-        self.LEN_HOURS = len(self.hours)
+        self.LEN_EMPLOYEE = len(self.employee)
         self.LEN_COLS = len(self.cols)
-        self.LEN_ROWS = self.LEN_MODULES * self.LEN_DAYS * self.LEN_HOURS
+        self.LEN_ROWS = self.LEN_MODULES * self.LEN_DAYS * self.LEN_EMPLOYEE
         # -------------------------------------
 
         # chromosome is a list that determines the order we fill self.genes(our dataframe)
@@ -32,10 +32,10 @@ class Chromosome():
 
         # keep track of available rooms.
         # 0: available, 1: not available at the given (day, time)
-        self.available_room = np.zeros((self.LEN_DAYS * self.LEN_HOURS, self.LEN_ROOMS), dtype=np.int8)
+        self.available_room = np.zeros((self.LEN_DAYS * self.LEN_EMPLOYEE, self.LEN_ROOMS), dtype=np.int8)
 
         # genes is a dataframe that contains a timetable for all modules
-        shape = (self.LEN_MODULES * self.LEN_DAYS * self.LEN_HOURS, self.LEN_COLS)
+        shape = (self.LEN_MODULES * self.LEN_DAYS * self.LEN_EMPLOYEE, self.LEN_COLS)
         self.genes = np.zeros(shape, dtype=np.int32)
 
     def get_chromosome(self):
@@ -58,16 +58,16 @@ class Chromosome():
             #       * Others consecutive cells in the same day, as many as unit course 
             #         of that column, is also assigned 1
             for clss in range(self.LEN_MODULES):
-                start = clss * self.LEN_DAYS * self.LEN_HOURS
-                end = (clss + 1) * self.LEN_DAYS * self.LEN_HOURS - 1
+                start = clss * self.LEN_DAYS * self.LEN_EMPLOYEE
+                end = (clss + 1) * self.LEN_DAYS * self.LEN_EMPLOYEE - 1
                 RAND_ROW = random.randint(start, end)
-                RAND_DAY = (RAND_ROW % (self.LEN_DAYS * self.LEN_HOURS)) // self.LEN_HOURS
+                RAND_DAY = (RAND_ROW % (self.LEN_DAYS * self.LEN_EMPLOYEE)) // self.LEN_EMPLOYEE
 
                 reserved_units = 0
-                for hour in range(self.LEN_HOURS):
+                for hour in range(self.LEN_EMPLOYEE):
                     if reserved_units == units:
                         break
-                    tmp_row = start + RAND_DAY * self.LEN_HOURS + hour
+                    tmp_row = start + RAND_DAY * self.LEN_EMPLOYEE + hour
                     # choosing a random column in available_rooms np table
                     tmp_i = self.rooms["type"].index(room_type)
                     if tmp_i == -1: raise ValueError("rooms type does not exist")
@@ -84,11 +84,11 @@ class Chromosome():
                         # rule 5: 
                         #       * If there is a cell in a column of a row (cx, di, hj) is equal to 1 
                         #         then for all row (cy, di, hj) have to be set -1 for cx <> cy at that column.
-                        BASE = tmp_row % (self.LEN_DAYS * self.LEN_HOURS)
+                        BASE = tmp_row % (self.LEN_DAYS * self.LEN_EMPLOYEE)
                         for clss2 in range(self.LEN_MODULES):
                             if clss != clss2:
                                 self.genes[BASE, working_column] = -1
-                            BASE += self.LEN_DAYS * self.LEN_HOURS
+                            BASE += self.LEN_DAYS * self.LEN_EMPLOYEE
 
                         # rule 3: 
                         #    For each row, there is only maximum a cell that is equal to 1.
@@ -106,9 +106,9 @@ class Chromosome():
         module_name = self.modules.index(module_name)
         for day in range(self.LEN_DAYS):
             sum_of_1 = 0
-            for hour in range(self.LEN_HOURS):
+            for hour in range(self.LEN_EMPLOYEE):
                 for row in range(u_per_day_mat.shape[0]):
-                    indx = hour + day * self.LEN_HOURS + module_name * self.LEN_DAYS * self.LEN_HOURS
+                    indx = hour + day * self.LEN_EMPLOYEE + module_name * self.LEN_DAYS * self.LEN_EMPLOYEE
                     if self.genes[indx, row] > 0:
                         u_per_day_mat[row, day] += 1
 
@@ -144,13 +144,13 @@ class Chromosome():
         return fitness
 
     def get_time_table(self, module_name):
-        time_table = pd.DataFrame(index=self.hours, columns=self.days)
+        time_table = pd.DataFrame(index=self.employee, columns=self.days)
 
         module_name = self.modules.index(module_name)
         for day in range(self.LEN_DAYS):
-            for hour in range(self.LEN_HOURS):
+            for hour in range(self.LEN_EMPLOYEE):
                 for col in range(self.LEN_COLS):
-                    indx = hour + day * self.LEN_HOURS + module_name * self.LEN_DAYS * self.LEN_HOURS
+                    indx = hour + day * self.LEN_EMPLOYEE + module_name * self.LEN_DAYS * self.LEN_EMPLOYEE
                     if self.genes[indx, col] > 0:
                         (subject, room_type, lecturer, _) = self.cols[col]
                         # ---------- get right room number ----------

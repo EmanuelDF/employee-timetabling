@@ -45,11 +45,11 @@ class GeneticAlgorithm:
             child_2b = [i for i in parent1.get_chromosome() if i not in child_2a]
             child2.chromosome = child_2a + child_2b
             
-            # print("\nMaking a cross")
-            # print("Parent1: ",parent1.get_chromosome())
-            # print("Parent2: ",parent2.get_chromosome())
-            # print("Child1 : ", child1.get_chromosome())
-            # print("Child2 : ", child2.get_chromosome())
+            print("\nMaking a cross")
+            print("Parent1: ",parent1.get_chromosome())
+            print("Parent2: ",parent2.get_chromosome())
+            print("Child1 : ", child1.get_chromosome())
+            print("Child2 : ", child2.get_chromosome())
 
             child1.fill_genes()
             child2.fill_genes()
