@@ -1,11 +1,11 @@
 # Genetic Algorithm for Employee Timetabling Problem (ETP) solution
 
-Application of an approximate genetic type algorithm (GA) developed during the production of an article as part of the evaluation of the discipline Algorithms and Data Structures - PPCA/UnB.
+This is an approximate genetic type algorithm (GA), developed during the production of an article as part of the evaluation of the discipline Algorithms and Data Structures - PPCA/UnB.
 
-Solve the problem of the work schedule of the Socio-Educational Agents of an Inpatient Unit in Brazil, in order to adapt and optimize the weekly workload of 40 hours, with lower cost and the need for adjustments.
+The problem of the work schedule of socio-educational agents in the Hospitalization Unit in Brazil is reported, in order to adapt and optimize the weekly workload of 40 hours, with lower cost and need for adjustments.
 
 ### Rules
-- The ideal number of Socio-Educational Agents per shift is 31 (thirty-one), whose current distribution is 28 servers in the modules;
+- The ideal number of socio-educational agents per shift is 31, whose current distribution is 28 servers in the modules;
 - Socio-educational agents work on a 24h x 72h scale (24 hours of work x 72 hours of rest);
 - At the end of the monthly cycle, the socio-educator must have completed and equivalent to 40 hours per week;
 - Each module must have at least 2 agents per shift;
