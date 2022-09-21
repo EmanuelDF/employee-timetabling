@@ -1,9 +1,9 @@
 # !!! Do not change keywords !!!
 modules:
-  - c1
-  - c2
-  - c3
-  - c4
+  - m1
+  - m2
+  - m3
+  - m4
 
 days:
   - d1
@@ -57,33 +57,22 @@ employee:
   - e16
 
 # <course, room_type, lecturer, units>
-scale_mapping: 
-  - ["cloud",  "A", "l5", 2]
-  - ["sta",    "TP","l5", 2]
-  - ["soa",    "TP","l5", 1]
-  - ["ia",     "A", "l2", 2]
-  - ["indx",   "A", "l2", 1]
-  - ["sma",    "TP","l5", 1]
-  - ["bigData","TP","l5", 1]
-  - ["entrep", "TP","l5", 1]
-  - ["fr",     "A", "l1", 1]
-  - ["ga",     "A", "l3", 1]
-  - ["verif",  "A", "l3", 1]
-  - ["mc1",    "A", "l0", 2]
-  - ["mc",     "A", "l3", 2]
-  - ["eng",    "A", "l4", 1]
-  - ["tp_inx", "A", "l3", 2]
-  - ["tp_ga",  "TP","l5", 2]
-  - ["mini_ga","A", "l3", 1]
-  - ["mini_ds","A", "l3", 1]
+scale_mapping:
+  - ["MD",  "A", "l5", 4]
+  - ["AED", "B", "l5", 4]
+  - ["ER",  "A", "l5", 4]
+  - ["CS",  "B", "l2", 4]
+  - ["VVTS","A", "l2", 4]
+  - ["TAES","B", "l5", 4]
+  - ["FPO", "A", "l5", 4]
+  - ["GPTI","B", "l5", 4]
+  - ["AEDI","A", "l1", 4]
 
 rooms:
   type:
     - A
-    - TP
+    - B
   number:
     - 50
     - 50
-  
-  
-  
+
