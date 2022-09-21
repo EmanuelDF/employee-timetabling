@@ -14,5 +14,5 @@ The problem of the work schedule of socio-educational agents in the Hospitalizat
 
 ## References
 
-* Samuel Lukas, Arnold Aribowo and Milyandreana Muchri (2012). Solving Timetable Problem by GeneticAlgorithm and Heuristic Search Case Study: Universitas Pelita Harapan Timetable, Real-World Applications ofGenetic Algorithms, Dr. Olympia Roeva (Ed.), ISBN: 978-953-51-0146-8, InTech, Available from: [this link](https://www.intechopen.com/chapters/30303)
+* Samuel Lukas, Arnold Aribowo and Milyandreana Muchri (2012). [Solving Timetable Problem by GeneticAlgorithm and Heuristic Search Case Study](https://www.intechopen.com/chapters/30303): Universitas Pelita Harapan Timetable, Real-World Applications ofGenetic Algorithms, Dr. Olympia Roeva (Ed.), ISBN: 978-953-51-0146-8, InTech.
 * [Genetic Algorithms explaination by Rayen MHAMDI](https://rayenmhamdi.github.io/ai/ga/)
